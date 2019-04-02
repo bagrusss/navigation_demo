@@ -19,14 +19,20 @@ class StartFragment: BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val nextButton = view.findViewById<Button>(R.id.action_start_to_next)
 
+        val args = NextFragmentArgs.Builder()
+                                   .setItemId(100500)
+                                   .setTitle("Next title")
+                                   .build()
+                                   .toBundle()
+
         //RxBinding
         disposables += nextButton.throttledClicks()
                                  .subscribe {
                                      Navigation.findNavController(nextButton)
-                                               .navigate(R.id.action_start_to_next)
+                                               .navigate(R.id.action_start_to_next, args)
                                  }
         // OnClickListener
-        nextButton.setupNav()
+        nextButton.setupNav(args)
     }
 
 }

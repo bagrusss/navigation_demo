@@ -29,6 +29,14 @@
             app:destination="@id/last"
             app:popUpTo="@+id/start"
             app:popUpToInclusive="false" />
+        <argument
+            android:name="itemId"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 
     <fragment
