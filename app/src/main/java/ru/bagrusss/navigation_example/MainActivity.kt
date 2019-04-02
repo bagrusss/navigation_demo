@@ -1,5 +1,6 @@
 package ru.bagrusss.navigation_example
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -23,6 +24,12 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putBundle(NAV_STATE, controller.saveState())
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+
+        controller.handleDeepLink(intent)
     }
 
     companion object {

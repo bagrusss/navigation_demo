@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit
  */
 
 fun View.setupNav(args: Bundle? = null) = setOnClickListener {
+    setOnClickListener(null)
     Navigation.findNavController(this)
               .navigate(id, args)
 }
