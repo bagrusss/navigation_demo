@@ -5,6 +5,9 @@ import android.view.View
 import android.widget.Button
 import androidx.navigation.Navigation
 import ru.bagrusss.navigation_example.R
+import ru.bagrusss.navigation_example.utils.plusAssign
+import ru.bagrusss.navigation_example.utils.setupNav
+import ru.bagrusss.navigation_example.utils.throttledClicks
 
 /**
  * Created by bagrusss on 02.04.2019
@@ -16,16 +19,14 @@ class StartFragment: BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val nextButton = view.findViewById<Button>(R.id.action_start_to_next)
 
-        /*disposables += RxView.clicks(nextButton)
-                             .subscribe {
-                                 Navigation.findNavController(nextButton)
-                                           .navigate(R.id.action_start_to_next)
-                             }*/
-
-        nextButton.setOnClickListener {
-            Navigation.findNavController(nextButton)
-                      .navigate(it.id)
-        }
+        //RxBinding
+        disposables += nextButton.throttledClicks()
+                                 .subscribe {
+                                     Navigation.findNavController(nextButton)
+                                               .navigate(R.id.action_start_to_next)
+                                 }
+        // OnClickListener
+        nextButton.setupNav()
     }
 
 }

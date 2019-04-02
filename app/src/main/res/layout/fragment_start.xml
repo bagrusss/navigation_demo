@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="16dp"
+        android:outlineProvider="none"
         android:text="@string/next"
         android:textColor="@color/black"
         app:backgroundTint="@color/yellow"
