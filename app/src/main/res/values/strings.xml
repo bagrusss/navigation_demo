@@ -3,4 +3,7 @@
     <string name="start">Start</string>
     <string name="next">Next</string>
     <string name="last">Last</string>
+
+    <string name="nested1">Nested 1</string>
+    <string name="nested2">Nested 2</string>
 </resources>

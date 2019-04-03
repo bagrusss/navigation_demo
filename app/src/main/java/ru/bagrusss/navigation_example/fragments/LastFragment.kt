@@ -5,7 +5,7 @@ import ru.bagrusss.navigation_example.R
 /**
  * Created by bagrusss on 02.04.2019
  */
-class LastFragment: BaseFragment() {
+open class LastFragment: BaseFragment() {
     
     override val layout = R.layout.fragment_last
 

@@ -38,6 +38,7 @@
             app:argType="long" />
         <argument
             android:name="title"
+            android:defaultValue="@null"
             app:argType="string"
             app:nullable="true" />
     </fragment>
@@ -47,5 +48,8 @@
         android:name="ru.bagrusss.navigation_example.fragments.LastFragment"
         android:label="LastFragment"
         tools:layout="@layout/fragment_last" />
+
+    <include app:graph="@navigation/nested" />
+
 
 </navigation>
