@@ -18,7 +18,7 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <deepLink
-            android:id="@+id/deepLink2"
+            android:id="@+id/start_deepLink"
             app:uri="navdemo://start/{itemId}" />
     </fragment>
 
@@ -27,11 +27,13 @@
         android:name="ru.bagrusss.navigation_example.fragments.NextFragment"
         android:label="NextFragment"
         tools:layout="@layout/fragment_next">
+
         <action
             android:id="@+id/action_next_to_last"
             app:destination="@id/last"
             app:popUpTo="@+id/start"
             app:popUpToInclusive="false" />
+
         <argument
             android:name="itemId"
             android:defaultValue="0L"
@@ -41,6 +43,7 @@
             android:defaultValue="@null"
             app:argType="string"
             app:nullable="true" />
+
     </fragment>
 
     <fragment
