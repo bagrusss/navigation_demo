@@ -5,6 +5,7 @@
 /build
 /captures
 .externalNativeBuild
+.settings
 
 gradle/wrapper/gradle-wrapper.jar
 local.properties
