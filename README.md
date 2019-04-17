@@ -7,4 +7,4 @@ https://medium.com/google-developer-experts/android-navigation-components-part-3
 
 https://habr.com/ru/company/redmadrobot/blog/359282/
 
-
+Start Android: https://startandroid.ru/ru/courses/architecture-components/27-course/architecture-components/557-urok-24-android-navigation-component-vvedenie.html
